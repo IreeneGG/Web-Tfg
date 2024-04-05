@@ -14,7 +14,7 @@ Title.displayName = 'Title';
 
 const SectionT = React.forwardRef(({ className, children, title, ...props }, ref) => (
     <section className='max-w-[90%]'>
-        <h2 className="text-3xl font-extrabold pb-2 flex justify-center pt-2 w-full">{title}</h2>
+        <h2 className="text-3xl font-extrabold pb-2 flex justify-center pt-2 w-full text-black">{title}</h2>
         <div ref={ref} className={cn(className, 'flex justify-center items-center w-full z-0 mb-20')} {...props}>
             {children}
         </div>

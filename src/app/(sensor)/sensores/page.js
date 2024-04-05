@@ -1,6 +1,6 @@
 
 import { Card, CardContainer } from "@/components/component/card";
-import { Section, Title } from "@/components/ui/section";
+import { Section,SectionT, Title } from "@/components/ui/section";
 import CardWeather from "@/components/component/cardWeather";
 
 export default function SensoresDetalle() {
@@ -19,7 +19,13 @@ export default function SensoresDetalle() {
           </CardContainer>
         </Section>
 
-
+        <SectionT Title="INFORMACION">
+            <div className="flex justify-center items-center h-full">
+              <div className="grid lg:max-w-6xl lg:w-full lg:grid-cols-auto lg:text-right w-full">
+                <p>MAS INFORMACION</p>
+              </div>
+            </div>
+          </SectionT>
 
       </div>
 
@@ -35,6 +41,7 @@ export default function SensoresDetalle() {
               </div>
             </div>
           </Section>
+         
         </div>
       </div>
 

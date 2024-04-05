@@ -12,7 +12,7 @@ const buttonVariants = cva(
         destructive:
           "text-white bg-red-700 hover:bg-red-600 w-34 h-10 rounded-md text-center transition-all duration-600 ease-in-out  cursor-pointer",
         secondary:
-          " text-black dark:text-white border-1 border-[#20230f] hover:bg-[#20230f] hover:text-white bg-gray-200 dark:bg-gray-900 w-34 h-10 rounded-md text-center transition-all duration-600 ease-in-out cursor-pointer",
+          " text-black dark:text-white border-1 border-[#20230f] hover:bg-[#20230f] hover:text-white bg-gray-200 dark:bg-gray-900 w-34 h-10 rounded-md text-center transition-all duration-700 ease-in-out cursor-pointer",
       },
       size: {
         default: "h-10 px-4 py-2",
