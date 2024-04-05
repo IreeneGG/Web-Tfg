@@ -3,8 +3,8 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-[#2F2F2F]  dark:bg-[#161616] dark:border-gray-800">
-      <div className="flex flex-col items-center justify-center py-12 gap-4 s mx-auto container px-4">
+    <footer className="bg-[#2a3910] dark:bg-[#161616] dark:border-gray-800">
+      <div className="flex flex-col items-center justify-center py-4 gap-4 s mx-auto container px-4">
         <div className="flex items-center gap-4  ">
 
           <FooterIcon icon="Instagram" />

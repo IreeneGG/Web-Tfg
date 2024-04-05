@@ -14,7 +14,7 @@ const CardWeather = ({ item, temperature,estado }) => {
   }
   return (
     <div
-      className="duration-300 font-mono text-white group cursor-pointer relative overflow-hidden bg-[#DCDFE4] w-28 h-48 dark:bg-[#22272B] rounded-3xl p-4 hover:w-56 hover:bg-blue-200 hover:dark:bg-[#0C66E4]"
+      className="duration-300 font-mono text-white group cursor-pointer relative overflow-hidden bg-[#DCDFE4] w-28 h-48 dark:bg-[#22272B] rounded-3xl p-4 hover:w-56 hover:bg-[#3f4d1f] hover:dark:bg-[#3f4d1f]"
     >
       <h3 className="text-xl text-center">{item}</h3>
       <div className="gap-4 relative">
