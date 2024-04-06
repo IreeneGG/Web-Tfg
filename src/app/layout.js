@@ -6,8 +6,7 @@ import { NavBar } from "@/components/component/nav-bar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Seguros Lagun Aro - Área personal",
-  description: "Área personal de Seguros Lagun Aro.",
+  title: "Brot-x",
   favicon: "/favicon.ico",
 };
 
