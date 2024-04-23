@@ -1,7 +1,7 @@
 
 const Card = ({ item }) => {
     return (
-        <div class="m-7 dark:bg-[#3f4d1f] bg-gray-900 max-w-[250px] min-w-[150px]  rounded-xl hover:bg-[#212b3f] dark:hover:bg-[#34758a] hover:scale-110 duration-700 p-5">
+        <div class="m-7 bg-[#4e4e4c] max-w-[250px] min-w-[150px]  rounded-xl hover:bg-[#5e7b33]  hover:scale-110 duration-700 p-5">
             <h4 class="py-2 text-white font-bold">{item}</h4>
             <p class="text-base leading-7 text-white font-semibold space-y-4">HUMEDAD</p>
             <p class="text-sm leading-7 text-slate-300 space-y-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro est numquam ipsa consequatur provident fugiat quaerat cupiditate temporibus cum?</p>

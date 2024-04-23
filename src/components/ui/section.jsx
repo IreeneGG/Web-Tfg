@@ -3,8 +3,8 @@ import * as React from 'react';
 import { cn } from "@/lib/utils";
 
 const Title = React.forwardRef(({ className, children, ...props }, ref) => (
-    <div className='flex justify-center items-center w-full z-10 pt-7 pb-2 text-[#003629] dark:text-white'>
-        <h1 ref={ref} className={cn(className, "text-5xl font-bold text-center w-full")} {...props}>
+    <div className='flex justify-center items-center w-full z-10 pt-7 pb-2 text-[#d2d2d3]'>
+        <h1 ref={ref} className={cn(className, "text-6xl font-blod text-center w-full")} {...props}>
             {children}
         </h1>
     </div>

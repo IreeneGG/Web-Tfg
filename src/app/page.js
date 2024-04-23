@@ -7,22 +7,21 @@ import Image from 'next/image';
 export default  function Home() {
 
   return (
-    <div className="flex flex-col md:flex-row flex-grow dark:bg-[#2F2F2F]">
-      {/* Div para el contenido principal */}
-      
-      <div className="w-full  bg-[#8a8d60] flex justify-center items-center p-8">
-        <div className="text-white text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">¡BIENVENIDO A Brot-x!</h1>
-          <p className="text-lg">Descubre una experiencia más cercana a tus cultivos a través de nuestra plataforma especializada en el monitoreo de parcelas. 
-          </p><p>Te proporcionaremos herramientas para comprender mejor tus terrenos y optimizar tus resultados agrícolas.</p>
-          <div className="w-full md:w-4/5 mx-auto mt-8">
-            <Image src="/fondo1.jpeg" alt="Descripción de la imagen" width={805} height={600} />
-          </div>
+    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/fondo1.jpeg')" }}>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <div className="text-white">
+          <h1 className="text-8xl font-bold items-center justify-center">Brot</h1>
+
+          <p className="text-lg mt-4 text-gray-400">Plataforma de Monitoreo.</p>
         </div>
       </div>
+    </div>
+
+    
 
     
       
-    </div>
+
   );
 }

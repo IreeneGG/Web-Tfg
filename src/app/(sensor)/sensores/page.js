@@ -3,24 +3,24 @@ import { Section,SectionT, Title } from "@/components/ui/section";
 import CardWeather from "@/components/component/cardWeather";
 
 export default async function SensoresDetalle() {
-  const res= await fetch('http://192.168.135.150:7000/')
-  const data = await res.json()
-  console.log(data)
+  //const res= await fetch('http://192.168.135.150:7000/')
+  //const data = await res.json()
+  //console.log(data)
   
   // Asegurémonos de que hay datos antes de intentar acceder al primer elemento
-  if (!data || !data.length) {
-    return <div>No hay datos disponibles</div>;
-  }
+  //if (!data || !data.length) {
+  //  return <div>No hay datos disponibles</div>;
+  //}
   
-  const firstItem = data[0]; // Obtenemos el primer elemento de los datos
+  //const firstItem = data[0]; // Obtenemos el primer elemento de los datos
   
   return (
-    <div className="flex flex-col md:flex-row flex-grow drak:bg-[#]">
+    <div className="relative w-full h-screen flex flex-col md:flex-row flex-grow bg-gradient-to-r from-[#27292C] to-[#404041]" style={{ overflowY: 'scroll' }}>
       {/* Div para el contenido principal */}
       <div className="w-full md:w-4/5">
 
         <Title>Sensores</Title>
-        <p className="text-black text-left p-4 items-center  pl-10 dark:text-white"> Visualización de los datos de los sensores instalados en la parcela</p>
+        <p className="text-black text-left p-4 items-center  pl-10 text-[#d2d2d3]"> Visualización de los datos de los sensores instalados en la parcela</p>
         <Section>
           <CardContainer>
             <Card item={"SENSOR1"} />
@@ -29,13 +29,7 @@ export default async function SensoresDetalle() {
           </CardContainer>
         </Section>
 
-        <SectionT Title="INFORMACION">
-            <div className="flex justify-center items-center h-full">
-              <div className="grid lg:max-w-6xl lg:w-full lg:grid-cols-auto lg:text-right w-full">
-                <p>MAS INFORMACION</p>
-              </div>
-            </div>
-          </SectionT>
+        
 
       </div>
 
@@ -47,7 +41,7 @@ export default async function SensoresDetalle() {
           <Section>
             <div className="flex justify-center items-center h-full">
               <div className="grid lg:max-w-6xl lg:w-full lg:grid-cols-auto lg:text-right w-full">
-                <CardWeather item={firstItem} temperature={4} estado={"frio"} />
+                <CardWeather item={"firstItem"} temperature={4} estado={"frio"} />
               </div>
             </div>
           </Section>
