@@ -1,54 +1,56 @@
 import { Card, CardContainer } from "@/components/component/card";
-import { Section,SectionT, Title } from "@/components/ui/section";
+import { Section, SectionT, Title } from "@/components/ui/section";
 import CardWeather from "@/components/component/cardWeather";
+
 
 export default async function SensoresDetalle() {
   //const res= await fetch('http://192.168.135.150:7000/')
   //const data = await res.json()
   //console.log(data)
-  
+
   // Asegurémonos de que hay datos antes de intentar acceder al primer elemento
   //if (!data || !data.length) {
   //  return <div>No hay datos disponibles</div>;
   //}
-  
+
   //const firstItem = data[0]; // Obtenemos el primer elemento de los datos
-  
+
   return (
-    <div className="relative w-full h-screen flex flex-col md:flex-row flex-grow bg-gradient-to-r from-[#27292C] to-[#404041]" style={{ overflowY: 'scroll' }}>
-      {/* Div para el contenido principal */}
-      <div className="w-full md:w-4/5">
 
-        <Title>Sensores</Title>
-        <p className="text-black text-left p-4 items-center  pl-10 text-[#d2d2d3]"> Visualización de los datos de los sensores instalados en la parcela</p>
-        <Section>
-          <CardContainer>
-            <Card item={"SENSOR1"} />
-            <Card item={"SENSOR2"} />
-            <Card item={"SENSOR3"} />
-          </CardContainer>
-        </Section>
+    <div className="card-inner card-started active" id="home-card">
+      <div className="row card-container">
 
-        
+        <div className="card-wrap col col-m-12 col-t-12 col-d-8 col-d-lg-6" data-simplebar>
 
-      </div>
 
-      {/* Contenido del div estrecho */}
-      <div className="w-full md:w-1/5 bg-cover bg-center p-4  bg-black bg-opacity-50" style={{ backgroundImage: "url('/fondoI.jpeg')", backgroundBlendMode: 'soft-light' }}>
-        <div className="max-w-full">
-          <h3 className="text-white text-2xl text-center">Tiempo real</h3>
-          <p className="text-white text-left p-4 items-center">Tiempo real captado por la platafroma AEMET en estos momentos</p>
-          <Section>
-            <div className="flex justify-center items-center h-full">
-              <div className="grid lg:max-w-6xl lg:w-full lg:grid-cols-auto lg:text-right w-full">
-                <CardWeather item={"firstItem"} temperature={4} estado={"frio"} />
+          <div className="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6" style={{ backgroundImage: "url('/fondo1.jpeg')" }}></div>
+
+
+          <div className="content inner-top">
+            <div className="row">
+              <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
+                <div className="title-bg absolute overflow-hidden left-0 top-[-50px] w-full text-[90px] leading-[120px] text-white uppercase font-bold tracking-[0.04em] text-center whitespace-nowrap pointer-events-none opacity-5">About Brot</div>
+                <div className="text">
+                  <p className="m-0 mb-[30px] text-[23px] font-extralight">
+                    <strong className="font-bold text-extra-color">Hello, I’m a Patrick</strong>, web-developer based on Paris. <br />
+                    I have rich experience in web site design & building <br />
+                    and customization. Also I am good at <strong className="font-bold text-extra-color">html, css, <br />
+                      wordpress, php, jquery, bootstrap.</strong>
+                  </p>
+                </div>
+                <div className="circle-bts">
+                  <a href="#"><span><i className="icon la la-download"></i>Download CV</span></a>
+                  <a href="#"><i className="icon la la-github"></i></a>
+                  <a href="#"><i className="icon la la-stack-overflow"></i></a>
+                  <a href="#"><i className="icon la la-skype"></i></a>
+                </div>
               </div>
             </div>
-          </Section>
-         
-        </div>
-      </div>
+          </div>
 
+        </div>
+
+      </div>
     </div>
   );
 }
