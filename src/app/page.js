@@ -6,13 +6,13 @@ import Image from 'next/image';
 
 
 
-export default  function Home() {
+export default function Home() {
 
   return (
+
     <div className="card-inner card-started active" id="home-card">
 
-
-    <div id="particles-bg" className="slide absolute overflow-hidden left-0 top-0 w-full h-full bg-[#262628] bg-no-repeat bg-cover"  style={{ backgroundImage: "url('/fondo1.jpeg')" }}></div>
+      <div id="particles-bg" className="slide absolute overflow-hidden left-0 top-0 w-full h-full bg-[#262628] bg-no-repeat bg-cover" style={{ backgroundImage: "url('/fondo1.jpeg')" }}></div>
 
       <div className="centrize full-width">
         <div className="vertical-center">
@@ -32,10 +32,10 @@ export default  function Home() {
 
         </div>
       </div>
-     
+
     </div>
-    
-  
-    
+
+
+
   );
 }
