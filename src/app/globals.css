@@ -1,3 +1,4 @@
+
 /*
 *	 Author: marketify
 *	 Author URL: https://themeforest.net/user/marketify
@@ -6782,52 +6783,14 @@ video {
     background-color: rgb(24 24 24 / var(--tw-bg-opacity)) !important;
   }
 
-  .header.opened .top-menu {
-    visibility: visible;
-    opacity: 1;
-  }
 
-  .header.opened .menu-btn .m-line {
-    background-color: none;
-  }
-
-  .header.opened .menu-btn .m-line:before {
-    top: 0px;
-    bottom: auto;
-    --tw-rotate: 45deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .header.opened .menu-btn .m-line:after {
-    top: auto;
-    bottom: 0px;
-    --tw-rotate: -45deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .header:before {
-    display: none;
-  }
 
   .header .logo {
     float: left;
     width: 50px;
   }
 
-  .header .top-menu {
-    visibility: hidden;
-    position: absolute;
-    left: 0px;
-    top: 58px;
-    margin-top: 0px;
-    width: 100%;
-    --tw-bg-opacity: 1;
-    background-color: rgb(32 32 32 / var(--tw-bg-opacity));
-    opacity: 0;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-  }
+  
 
   .header .top-menu ul li {
     display: inline-block;
@@ -7015,13 +6978,7 @@ video {
 /********  Small  *******/
 
 @media (max-width: 560px) {
-  .header .top-menu ul li a .link {
-    display: none;
-  }
 
-  .\!.header .top-menu ul li a .link {
-    display: none;
-  }
 
   .card-inner.card-started {
     text-align: center;

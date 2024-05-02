@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         
         </div>
 
-        <script src="scripts/simplebar.js"></script>
+       
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function NavBar() {
@@ -7,63 +8,40 @@ export function NavBar() {
 
 
       <div className="logo relative p-0 bg-extra-color text-center">
-        <a className="block h-[58px] leading-[58px] text-white no-underline" href="#"><span className="relative font-cormorant text-[28px] font-bold uppercase z-[2]">P</span></a>
+        <a className="block h-[58px] leading-[58px] text-white no-underline" href="#"><span className="relative font-cormorant text-[28px] font-bold uppercase z-[2]">B</span></a>
       </div>
       
       
       <div className="top-menu mt-[12px] w-full text-[0]">
         <ul>
-          <li className="block">
+          <li className="activate block">
             <a className="mx-0 my-[8px] relative block text-white text-center" href="/aboutBrot">
-              <span className="icon la la-home m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Home</span>
+              <div className="flex items-center justify-center"><Image src="/casa.svg"  width={27} height={27} alt="Icono" /></div>
+              
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Brot</span>
             </a>
           </li>
-          <li className="block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="#about-card">
-              <span className="icon la la-user m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">About</span>
+          <li className="activate block">
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/aboutBrot">
+              <div className="flex items-center justify-center"><Image src="/estadistica.svg"  width={27} height={27} alt="Icono" /></div>
+              
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Estadisticas</span>
             </a>
           </li>
-          <li className="block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="#resume-card">
-              <span className="icon la la-gear m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Resume</span>
-            </a>
-          </li>
-          <li className="block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="#works-card">
-              <span className="icon la la-eye m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Portfolio</span>
-            </a>
-          </li>
-          <li className="block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="#blog-card">
-              <span className="icon la la-newspaper-o m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Blog</span>
-            </a>
-          </li>
-          <li className="block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="#contacts-card">
-              <span className="icon la la-envelope m-0 block h-[32px] leading-[32px] text-[21px] text-[#a9a9a9] rounded-[30px] transition-all duration-300"></span>
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Contacts</span>
-            </a>
-          </li>
+          
         </ul>
       </div>
       
       
-      <div className="social absolute left-0 bottom-[10px] w-full">
+      {/* <div className="social absolute left-0 bottom-[10px] w-full">
         <a className="my-[6px] mx-0 block" target="_blank" href="https://dribbble.com/"><span className="icon la la-dribbble m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
         <a className="my-[6px] mx-0 block" target="_blank" href="https://facebook.com/"><span className="icon la la-facebook m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
         <a className="my-[6px] mx-0 block" target="_blank" href="https://github.com/"><span className="icon la la-github m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
         <a className="my-[6px] mx-0 block" target="_blank" href="https://stackoverflow.com/"><span className="icon la la-stack-overflow m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
       </div>
       
+       */}
       
-      <span className="menu-btn">
-        <span className="m-line"></span>
-      </span>
       
       </header>
     );
