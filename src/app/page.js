@@ -1,10 +1,3 @@
-import { Card, CardContainer } from "@/components/component/card";
-import { Section, SectionT, Title } from "@/components/ui/section";
-import CardWeather from "@/components/component/cardWeather";
-import Image from 'next/image';
-
-
-
 
 export default function Home() {
 

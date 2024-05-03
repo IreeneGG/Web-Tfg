@@ -7,10 +7,7 @@ export function Sidebar() {
     <div className="flex flex-col justify-between h-full">
       <ul>
         <li>
-          <a
-            href="#"
-            className="flex items-center gap-2 border-s-[3px] bg-blue-50 px-4 py-3"
-          >
+          <a href="#" className="flex items-center gap-2 border-s-[3px] bg-blue-50 px-4 py-3">
             <Image src="/fondo1.jpeg" className="rounded-full" alt="Descripción de la imagen" width={40} height={40} />
           </a>
         </li>

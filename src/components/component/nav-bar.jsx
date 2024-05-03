@@ -16,18 +16,26 @@ export function NavBar() {
         <ul>
           <li className="activate block">
             <a className="mx-0 my-[8px] relative block text-white text-center" href="/aboutBrot">
-              <div className="flex items-center justify-center"><Image src="/casa.svg"  width={27} height={27} alt="Icono" /></div>
+              <div className="flex items-center justify-center"><Image src="/casa.svg"  width={27} height={27} alt="Casa" /></div>
               
               <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Brot</span>
             </a>
           </li>
           <li className="activate block">
-            <a className="mx-0 my-[8px] relative block text-white text-center" href="/aboutBrot">
-              <div className="flex items-center justify-center"><Image src="/estadistica.svg"  width={27} height={27} alt="Icono" /></div>
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/sensores">
+              <div className="flex items-center justify-center"><Image src="/sensor.svg"  width={27} height={27} alt="Sensor" /></div>
               
-              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Estadisticas</span>
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Sensores</span>
             </a>
           </li>
+          <li className="activate block">
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/tiempo">
+              <div className="flex items-center justify-center"><Image src="/tiempo1.svg"  width={27} height={27} alt="tiempo" /></div>
+              
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Tiempo</span>
+            </a>
+          </li>
+          
           
         </ul>
       </div>

@@ -1,10 +1,8 @@
-import { Card, CardContainer } from "@/components/component/card";
-import { Section, SectionT, Title } from "@/components/ui/section";
-import CardWeather from "@/components/component/cardWeather";
+
 import {CardService} from "@/components/component/cardService";
 
 
-export default async function SensoresDetalle() {
+export default async function AboutBrot() {
   //const res= await fetch('http://192.168.135.150:7000/')
   //const data = await res.json()
   //console.log(data)
