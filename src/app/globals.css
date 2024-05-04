@@ -6826,6 +6826,7 @@ video {
 
   .header .top-menu ul li {
     display: inline-block;
+    padding-bottom: 3px;
   }
 
   .header .top-menu ul li a {
@@ -7510,6 +7511,8 @@ video {
 
 .block {
   display: block;
+  margin-right:4px;
+  margin-left:3px;
 }
 
 .inline-block {
