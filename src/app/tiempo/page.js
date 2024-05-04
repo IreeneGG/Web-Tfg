@@ -1,10 +1,13 @@
 
 import { CardTiempo } from "@/components/component/cardTiempo";
 import { CardTiempos } from "@/components/component/cardTiempos";
+import { CardAcumulado } from "@/components/component/cardAcumulado";
 
 export default async function TiempoDetalle() {
-  const res = await fetch('http://192.168.169.150:7000/')
+  const res = await fetch('http://192.168.205.150:7000/')
   const data = await res.json()
+  const res1 = await fetch('http://192.168.205.150:8000/')
+  const data1 = await res1.json()
   //console.log(data)
 
   // Asegurémonos de que hay datos antes de intentar acceder al primer elemento
@@ -15,12 +18,12 @@ export default async function TiempoDetalle() {
   const firstItem = data[0]; // Obtenemos el primer elemento de los datos
   const secondItem = data[1]; const threeItem = data[2];  const fourItem = data[3]; const fiveItem = data[4]; const sixItem = data[5]; const sevenItem = data[6]; const eightItem = data[7];
   const estadoCielo = secondItem['Estado Cielo'];
-console.log(data[3])
+console.log(data1['celda_valor1 (Mes anterior): '])
   return (
 
     <div className="card-inner active" id="about-card">
       <div className="row card-container">
-        <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-8 col-d-lg-6" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
+        <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-9 col-d-lg-7" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
           <div className="card-normal col col-m-12 col-t-12 col-d-4 col-d-lg-6" style={{ backgroundImage: "url('/fondo2.jpeg')" }}></div>
 
 
@@ -31,8 +34,8 @@ console.log(data[3])
                 <div className="text">
                   <p className="m-0 mb-[30px] text-[23px] font-extralight">
                     La página <strong className="font-bold text-extra-color">Tiempo </strong>te muestra las condiciones<br />
-                    climatológicas que hace en tu explotación, <br />
-                    ofrecido por la plataforma <strong className="font-bold text-extra-color">Aemet</strong>
+                    climatológicas en tu explotación, y precipitaciones cumuladas. <br />
+                    Gracias a las plataformas <strong className="font-bold text-extra-color">Aemet</strong> y <strong className="font-bold text-extra-color">SAIH Ebro</strong>
                   </p>
                 </div>
 
@@ -52,7 +55,7 @@ console.log(data[3])
             <div className="row service-items text-[0] ">
 
               <CardTiempo titulo={firstItem.Nombre} tempMa={secondItem.Máxima} tempMi={secondItem.Mínima} estado={estadoCielo} />
-
+              <CardAcumulado mesA={data1['celda_valor1 (Mes anterior): ']} mesC={data1[' celda_valor2 (Mes en curso): ']} añoA={data1[' celda_valor3 (año anterior):']} />
             </div>
 
             {/* tiempo semana */}

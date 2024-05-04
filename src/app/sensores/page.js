@@ -3,22 +3,12 @@ import { CardGrafics } from "@/components/component/cardGrafics";
 
 
 export default async function SensoresDetalle() {
-    //const res= await fetch('http://192.168.135.150:7000/')
-    //const data = await res.json()
-    //console.log(data)
-
-    // Asegurémonos de que hay datos antes de intentar acceder al primer elemento
-    //if (!data || !data.length) {
-    //  return <div>No hay datos disponibles</div>;
-    //}
-
-    //const firstItem = data[0]; // Obtenemos el primer elemento de los datos
-
+    
     return (
 
         <div className="card-inner active" id="about-card">
         <div className="row card-container">
-        <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-8 col-d-lg-6" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
+        <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-9 col-d-lg-7" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
             <div className="card-normal col col-m-12 col-t-12 col-d-4 col-d-lg-6"  style={{ backgroundImage: "url('/fondo2.jpeg')" }}></div>
   
   

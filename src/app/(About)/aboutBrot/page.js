@@ -19,7 +19,7 @@ export default async function AboutBrot() {
     <div className="card-inner active" id="about-card">
       <div className="row card-container">
       <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-8 col-d-lg-6" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
-          <div className="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6"  style={{ backgroundImage: "url('/fondo1.jpeg')" }}></div>
+          <div className="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6"  style={{ backgroundImage: "url('/verdeclaro.png')" }}></div>
 
 
           <div className="content inner-top">
@@ -53,7 +53,7 @@ export default async function AboutBrot() {
 
               <CardService titulo="Estadísticas" descripcion="Visualización de los datos acumulados de los sensores mediante gráficas"/>
               <CardService titulo="Precipitaciones" descripcion="Visualización de las condiciones climatológicas de los próximos días segun plataforma aemet"/>
-              <CardService titulo="Acumuladas" descripcion="Visualización de las precipitaciones acumuladas en la localidad"/>
+              <CardService titulo="Acumulados" descripcion="Visualización de las precipitaciones acumuladas en la localidad"/>
               <CardService titulo="Algoritmo IA" descripcion="Visualización de las precipitaciones acumuladas en la localidad"/>
             </div>
           </div>
