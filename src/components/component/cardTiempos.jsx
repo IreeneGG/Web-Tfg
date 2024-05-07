@@ -6,7 +6,7 @@ const CardTiempos = ({ fecha, tempMa, tempMi,viento, estado }) => {
 
     // Verificamos si la frase contiene ciertas palabras clave
     if (estado && (estado.includes("nuboso") || estado.includes("nubosos"))) {
-        srcImage = "/nublado.png";
+        srcImage = "/llover.png";
     } else if (estado && estado.includes("lluvia")) {
         srcImage = "/llover.png";
     } else if (estado && estado.includes("sol")) {

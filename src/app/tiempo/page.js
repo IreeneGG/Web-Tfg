@@ -4,9 +4,9 @@ import { CardTiempos } from "@/components/component/cardTiempos";
 import { CardAcumulado } from "@/components/component/cardAcumulado";
 
 export default async function TiempoDetalle() {
-  const res = await fetch('http://192.168.205.150:7000/')
+  const res = await fetch('http://192.168.236.150:7000/')
   const data = await res.json()
-  const res1 = await fetch('http://192.168.205.150:8000/')
+  const res1 = await fetch('http://192.168.236.150:8000/')
   const data1 = await res1.json()
   //console.log(data)
 
@@ -34,7 +34,7 @@ console.log(data1['celda_valor1 (Mes anterior): '])
                 <div className="text">
                   <p className="m-0 mb-[30px] text-[23px] font-extralight">
                     La página <strong className="font-bold text-extra-color">Tiempo </strong>te muestra las condiciones<br />
-                    climatológicas en tu explotación, y precipitaciones cumuladas. <br />
+                    climatológicas en tu explotación, y precipitaciones acumuladas. <br />
                     Gracias a las plataformas <strong className="font-bold text-extra-color">Aemet</strong> y <strong className="font-bold text-extra-color">SAIH Ebro</strong>
                   </p>
                 </div>

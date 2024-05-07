@@ -1,9 +1,20 @@
 
 import { CardGrafics } from "@/components/component/cardGrafics";
+import { obtenerLecturasH } from "@/lib/mysqldb/consultasSensores";
+import { fetchDatosLectura } from "../../lib/mysqldb/demo_db_connection"; 
 
 
 export default async function SensoresDetalle() {
-    
+  try {
+    // Llamar al método fetchDatosLectura para obtener los datos de la consulta
+    const result = await fetchDatosLectura();
+    console.log('Resultado de la consulta:', result);
+    // Hacer algo con los datos aquí
+  } catch (error) {
+    console.error('Error al obtener los datos de la consulta:', error);
+    // Manejar el error aquí
+  }
+
     return (
 
         <div className="card-inner active" id="about-card">
