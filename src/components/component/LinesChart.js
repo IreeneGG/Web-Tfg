@@ -52,6 +52,17 @@ export default function LinesChart({ datos }) {
     };
 
     const misoptions = {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Humedad del suelo',
+                color: 'rgb(90, 150, 50)',
+                font: {
+                    size: 18,
+                    weight: 'bold'
+                }
+            }
+        },
         scales: {
             y: {
                 min: 0,

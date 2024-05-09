@@ -1,38 +1,49 @@
 
 import { CardGrafics , CardGraficsQ} from "@/components/component/cardGrafics";
 import { obtenerLecturasH } from "@/lib/mysqldb/consultasSensores";
-import { fetchDatosLectura } from "../../lib/mysqldb/demo_db_connection"; 
+import { fetchDatosLectura,fetchUltimaTupla } from "../../lib/mysqldb/demo_db_connection"; 
 
 
 
 export default async function SensoresDetalle() {
-  let result
+  let result,result1;
+  let datos = [],ultimaTupla = []; // Declarar datos como let fuera del bloque try
+
   try {
     // Llamar al método fetchDatosLectura para obtener los datos de la consulta
     result = await fetchDatosLectura();
     console.log('Resultado de la consulta:', result);
     // Hacer algo con los datos aquí
+
+    // Modificar datos dentro del bloque try
+    datos = result.length > 0 ? result.map(row => ({
+      fecha: row.fecha,
+      humedad_media: row.humedad_media
+    })) : [];
+
   } catch (error) {
     console.error('Error al obtener los datos de la consulta:', error);
     // Manejar el error aquí
+    return; // Salir de la función si ocurre un error
   }
-   // Mapear los objetos RowDataPacket a objetos planos
-const datos = result.length > 0 ? result.map(row => ({
-    fecha: row.fecha,
-    humedad_media: row.humedad_media
-})) : [];
 
-// // ultima tupla
-// let result1;
-//   try {
-//     // Llamar al método fetchUltimaTupla para obtener la última tupla de la tabla
-//     result1 = await fetchUltimaTupla();
-//     console.log('Última tupla de la consulta:', result1);
-//     // Hacer algo con los datos aquí
-//   } catch (error) {
-//     console.error('Error al obtener la última tupla de la consulta:', error);
-//     // Manejar el error aquí
-//   }
+  try {
+    // Llamar al método fetchUltimaTupla para obtener la última tupla de la tabla
+    result1 = await fetchUltimaTupla();
+    
+    // Hacer algo con los datos aquí
+
+    // Modificar ultimaTupla dentro del bloque try
+    ultimaTupla = result1.length > 0 ? {
+      fecha: result1[0].fecha,
+      humedad_media: result1[0].humedad_media
+    } : {};
+    console.log('Última tupla de la consulta:', ultimaTupla);
+  } catch (error) {
+    console.error('Error al obtener la última tupla de la consulta:', error);
+    // Manejar el error aquí
+  }
+
     return (
 
         <div className="card-inner active" id="about-card">
@@ -70,7 +81,7 @@ const datos = result.length > 0 ? result.map(row => ({
             
               <div className="row service-items text-[0]">
                 <CardGrafics datos={datos}/>
-                {/* <CardGraficsQ datos={result1}/> */}
+                <CardGraficsQ datos1={ultimaTupla}/> 
 
               </div>
             </div>
