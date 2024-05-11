@@ -1,4 +1,3 @@
-
 "use client"
 import { Line } from 'react-chartjs-2';
 import {
@@ -42,11 +41,11 @@ export default function LinesChart({ datos }) {
                 data: humedad,
                 tension: 0.5,
                 fill: true,
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'rgb(255, 159, 64)', // Naranja
+                backgroundColor: 'rgba(255, 159, 64, 0.5)', // Tono de naranja transparente
                 pointRadius: 5,
-                pointBorderColor: 'rgba(255, 99, 132)',
-                pointBackgroundColor: 'rgba(255, 99, 132)',
+                pointBorderColor: 'rgba(255, 159, 64)',
+                pointBackgroundColor: 'rgba(255, 159, 64)',
             },
         ],
     };
@@ -56,11 +55,14 @@ export default function LinesChart({ datos }) {
             title: {
                 display: true,
                 text: 'Humedad del suelo',
-                color: 'rgb(90, 150, 50)',
+                color: 'rgb(200, 200, 200)',
                 font: {
                     size: 18,
                     weight: 'bold'
                 }
+            },
+            legend: {
+                display: false // Oculta la leyenda
             }
         },
         scales: {
@@ -69,10 +71,10 @@ export default function LinesChart({ datos }) {
                 max: 100, // Establecer el máximo en 100 para porcentaje
             },
             x: {
-                ticks: { color: 'rgb(255, 99, 132)' },
+                ticks: { color: 'rgb(255, 159, 64)' }, // Color de las marcas de los ejes X
             },
         },
     };
-
+    
     return <Line data={midata} options={misoptions} />;
 }

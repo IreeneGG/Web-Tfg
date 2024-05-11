@@ -15,7 +15,7 @@ const CardGrafics = ({ titulo, descripcion,datos  }) => {
 export { CardGrafics };
 
 const CardGraficsQ = ({datos1}) => {
-    console.log("PIES DATOS1:",datos1);
+    // console.log("PIES DATOS1:",datos1);
     return (
         <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
             <div className="service-item card-box min-h-[236px] text-left">
@@ -28,3 +28,18 @@ const CardGraficsQ = ({datos1}) => {
     )
 };
 export { CardGraficsQ };
+
+const CardGraficsB = ({datosAmbiente}) => {
+    // console.log("PIES DATOS1:",datos1);
+    return (
+        <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
+            <div className="service-item card-box min-h-[236px] text-left">
+                <BarsChat datosAmbiente={datosAmbiente}/>
+              
+            </div>
+        </div>
+
+
+    )
+};
+export { CardGraficsB };

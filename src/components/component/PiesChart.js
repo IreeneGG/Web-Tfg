@@ -20,13 +20,13 @@ export default function Pies({ datos1 }) {
                 data: [humedadPorcentaje, otrosPorcentaje],
                 backgroundColor: [
                     
-                    'rgba(54, 162, 235, 0.2)', // Color para otros humedad
-                    'rgba(90, 172, 50, 0.2)', // Color para la seco
+                    'rgba(0, 220, 195, 0.4)', // Color para otros humedad
+                    'rgba(247, 148, 0, 0.4)', // Color para la seco
                 ],
                 borderColor: [
                     
-                    'rgba(54, 162, 235, 1)', // Color para el borde de humedad
-                    'rgba(90, 172, 50, 1)', // Color para el borde de la seco
+                    'rgba(0, 220, 195, 1)', // Color para el borde de humedad
+                    'rgba(247, 148, 0, 1)', // Color para el borde de la seco
                 ],
                 borderWidth: 1,
             },
@@ -39,8 +39,8 @@ export default function Pies({ datos1 }) {
         plugins: {
           title: {
               display: true,
-              text: 'Humedad del Suelo', // Título de la gráfica
-              color: 'rgb(90, 150, 50)',
+              text: 'Porcentaje de agua en tierra', // Título de la gráfica
+              color: 'rgb(200, 200, 200)',
               font: {
                   size: 16, // Tamaño de la fuente del título
               },
