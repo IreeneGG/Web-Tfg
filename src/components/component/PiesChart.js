@@ -9,7 +9,7 @@ export default function Pies({ datos1 }) {
     console.log("PIES DATOS2:", datos1);
     
     // Calcular el porcentaje de humedad media y el porcentaje restante
-    const humedadPorcentaje = Math.round(datos1.humedad_media * 100);
+    const humedadPorcentaje = Math.round(datos1.humedad * 100);
     const otrosPorcentaje = 100 - humedadPorcentaje;
 
     const data = {

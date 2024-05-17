@@ -3,7 +3,7 @@ var mysql = require('mysql');
 
 // Crear la conexión a la base de datos
 var con = mysql.createConnection({
-  host: "192.168.132.150",
+  host: "192.168.221.150",
   user: "admin",
   password: "1234",
   database: "sensores"
@@ -11,7 +11,30 @@ var con = mysql.createConnection({
 
 function fetchDatosLectura() {
   return new Promise((resolve, reject) => {
-    con.query("SELECT DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha, AVG(humedad) AS humedad_media FROM lecturaSuelo GROUP BY DATE_FORMAT(fecha, '%Y-%m-%d')", function (err, result) {
+    const query = `
+      SELECT 
+        DATE_FORMAT(ls.fecha, '%Y-%m-%d') AS fecha, 
+        AVG(ls.humedad) AS humedad_media 
+      FROM 
+        lecturaSuelo ls
+      INNER JOIN (
+        SELECT 
+          DISTINCT DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha
+        FROM 
+          lecturaSuelo
+        WHERE 
+          fecha <= NOW()
+        ORDER BY 
+          fecha DESC
+        LIMIT 4
+      ) sub ON DATE_FORMAT(ls.fecha, '%Y-%m-%d') = sub.fecha
+      GROUP BY 
+        DATE_FORMAT(ls.fecha, '%Y-%m-%d')
+      ORDER BY 
+        fecha ASC;
+    `;
+    
+    con.query(query, function (err, result) {
       if (err) {
         reject(err); // Rechazar la promesa si hay un error
       } else {
@@ -24,13 +47,15 @@ function fetchDatosLectura() {
   });
 }
 
+
 function fetchUltimaTupla() {
   return new Promise((resolve, reject) => {
-    con.query("SELECT DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha, AVG(humedad) AS humedad_media FROM lecturaSuelo ORDER BY fecha DESC LIMIT 1", function (err, result) {
+    con.query("SELECT * FROM lecturaSuelo ORDER BY id DESC LIMIT 1", function (err, result) {
       if (err) {
         reject(err); // Rechazar la promesa si hay un error
       } else {
         resolve(result); // Resolver la promesa con el resultado de la consulta
+        console.log('ESTE:', result);
       }
     });
   }).catch(error => {

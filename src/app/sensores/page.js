@@ -1,57 +1,16 @@
-
-import { CardGrafics, CardGraficsQ,CardGraficsB } from "@/components/component/cardGrafics";
+import  {CardGrafics,CardGraficsQ,CardGraficsB} from "@/components/component/cardGrafics";
 import { obtenerLecturasH } from "@/lib/mysqldb/consultasSensores";
 import { fetchDatosLectura, fetchUltimaTupla, fetchDatosLecturaAmbiente } from "../../lib/mysqldb/demo_db_connection";
-
+import { Suspense } from "react";
 
 
 export default async function SensoresDetalle() {
   let datos = [];
-  let ultimaTupla = {};
+
   let datosAmbiente = [];
 
-  try {
-    // Obtener los datos de la consulta
-    const result = await fetchDatosLectura();
-    // console.log('Resultado de la consulta:', result);
+  
 
-    // Modificar datos dentro del bloque try
-    datos = result.length > 0 ? result.map(row => ({
-      fecha: row.fecha,
-      humedad_media: row.humedad_media
-    })) : [];
-  } catch (error) {
-    console.error('Error al obtener los datos de la consulta:', error);
-  }
-
-  try {
-    // Obtener la última tupla de la consulta
-    const result1 = await fetchUltimaTupla();
-
-    // Modificar ultimaTupla dentro del bloque try
-    ultimaTupla = result1.length > 0 ? {
-      fecha: result1[0].fecha,
-      humedad_media: result1[0].humedad_media
-    } : {};
-    // console.log('Última tupla de la consulta:', ultimaTupla);
-  } catch (error) {
-    console.error('Error al obtener la última tupla de la consulta:', error);
-  }
-  try {
-    // Obtener los datos de la consulta
-    const result = await fetchDatosLecturaAmbiente();
-
-
-    datosAmbiente = result.map(row => ({
-      fecha: row.fecha,
-      temperatura_media: row.temperatura_media,
-      humedad_media: row.humedad_media
-    }));
-    console.log('Resultado de la consulta ambiente:', datosAmbiente);
-  } catch (error) {
-    console.error('Error al obtener los datos de la consulta:', error);
-
-  }
   return (
 
     <div className="card-inner active" id="about-card">
@@ -88,10 +47,16 @@ export default async function SensoresDetalle() {
 
 
             <div className="row service-items text-[0]">
-              <CardGrafics datos={datos} />
-              <CardGraficsQ datos1={ultimaTupla} />
-              <CardGraficsB datosAmbiente={datosAmbiente}/>
-              
+              <Suspense fallback={<div>Cargando...</div>}>
+                <CardGrafics/>
+              </Suspense>
+               <Suspense fallback={<div>Cargando...</div>}>
+                <CardGraficsQ />
+              </Suspense>
+              <Suspense fallback={<div>Cargando...</div>}>
+                <CardGraficsB/>
+              </Suspense>
+               
 
             </div>
           </div>
