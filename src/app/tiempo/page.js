@@ -4,9 +4,9 @@ import { CardTiempos } from "@/components/component/cardTiempos";
 import { CardAcumulado } from "@/components/component/cardAcumulado";
 
 export default async function TiempoDetalle() {
-  const res = await fetch('http://192.168.236.150:7000/')
+  const res = await fetch('http://localhost:7000/')
   const data = await res.json()
-  const res1 = await fetch('http://192.168.236.150:8000/')
+  const res1 = await fetch('http://localhost:8000/')
   const data1 = await res1.json()
   //console.log(data)
 

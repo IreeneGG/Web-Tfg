@@ -3,7 +3,7 @@ var mysql = require('mysql');
 
 // Crear la conexión a la base de datos
 var con = mysql.createConnection({
-  host: "192.168.221.150",
+  host: "localhost",
   user: "admin",
   password: "1234",
   database: "sensores"

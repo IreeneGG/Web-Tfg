@@ -38,20 +38,27 @@ export function NavBar() {
             </a>
           </li>
           
+          <li className="activate block m-4">
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/contacto">
+              <div className="flex items-center justify-center"><Image src="/contact.svg"  width={27} height={27} alt="Contacto" /></div>
+              
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Contacto</span>
+            </a>
+          </li>
+          <li className="activate block m-4">
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/noticias">
+              <div className="flex items-center justify-center"><Image src="/news1.svg"  width={27} height={27} alt="Noticias" /></div>
+              
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Noticias</span>
+            </a>
+          </li>
+          
           
         </ul>
       </div>
       
       
-      {/* <div className="social absolute left-0 bottom-[10px] w-full">
-        <a className="my-[6px] mx-0 block" target="_blank" href="https://dribbble.com/"><span className="icon la la-dribbble m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
-        <a className="my-[6px] mx-0 block" target="_blank" href="https://facebook.com/"><span className="icon la la-facebook m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
-        <a className="my-[6px] mx-0 block" target="_blank" href="https://github.com/"><span className="icon la la-github m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
-        <a className="my-[6px] mx-0 block" target="_blank" href="https://stackoverflow.com/"><span className="icon la la-stack-overflow m-0 block h-[26px] leading-[26px] text-[17px] text-[a9a9a9] transition-all duration-300"></span></a>
-      </div>
-      
-       */}
-      
+       
       
       </header>
     );
@@ -69,17 +76,7 @@ function IconFromName(name) {
     }
   }
   
-  function FooterIcon({ icon, ...props }) {
-    const Icon = IconFromName(icon);
-    return (
-      <Link
-        className="rounded-lg p-2 text-black dark:text-gray-300 "
-        href="#">
-        <Icon className="h-6 w-6" />
-        <span className="sr-only">{icon}</span>
-      </Link>
-    )
-  }
+  
   
   
   function InstagramIcon(props) {
