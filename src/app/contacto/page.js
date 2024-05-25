@@ -3,6 +3,7 @@ import { obtenerLecturasH } from "@/lib/mysqldb/consultasSensores";
 import { fetchDatosLectura, fetchUltimaTupla, fetchDatosLecturaAmbiente } from "../../lib/mysqldb/demo_db_connection";
 import { Suspense } from "react";
 import Image from 'next/image';
+import Chat from "@/components/component/chat";
 
 export default async function Contactos() {
   let datos = [];
@@ -112,6 +113,15 @@ export default async function Contactos() {
                     </div>
                     <div className="name m-0 text-[16px] leading-[20px] text-white font-bold">Contacto</div>
                     <p className="m-0">4534567</p>
+                  </div>
+                </div>
+                <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
+                  <div className="contacts-item card-box min-h-[87px] text-left !py-[20px] !pr-[20px] !pl-[75px]">
+                    <div className="icon m-0 absolute left-[20px] top-[20px] w-[40px] h-[40px] leading-[40px] text-[40px] text-extra-color">
+                      
+                    </div>
+                    <div className="name m-0 text-[16px] leading-[20px] text-white font-bold">Contacto</div>
+                    <Chat/>
                   </div>
                 </div>
               </div>

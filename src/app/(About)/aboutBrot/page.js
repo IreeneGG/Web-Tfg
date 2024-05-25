@@ -1,6 +1,6 @@
 
 import {CardService} from "@/components/component/cardService";
-
+import Chat from "@/components/component/chat";
 
 export default async function AboutBrot() {
   //const res= await fetch('http://192.168.135.150:7000/')
@@ -19,7 +19,8 @@ export default async function AboutBrot() {
     <div className="card-inner active" id="about-card">
       <div className="row card-container">
       <div className="relative overflow-x-hidden overflow-hidden overflow-y-auto -webkit-overflow-scrolling-touch h-full block col col-m-12 col-t-12 col-d-8 col-d-lg-6" style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
-          <div className="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6"  style={{ backgroundImage: "url('/verdeclaro.png')" }}></div>
+        <div className="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6" style={{ backgroundImage: "url('/verdeclaro.png')", minHeight: '50%' }}>
+          </div>
 
 
           <div className="content inner-top">

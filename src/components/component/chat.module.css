@@ -1,0 +1,81 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Agrega scroll vertical cuando el contenido es más grande que el contenedor */
+  padding: 10px;
+  height: 300px; /* Tamaño fijo */
+}
+.chatMessages::-webkit-scrollbar {
+  width: 0; /* Oculta la barra de desplazamiento en navegadores webkit */
+}
+
+.botMessage {
+  background-color: #E0E0E0;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px; /* Espacio entre los mensajes del bot */
+  margin-right: auto;
+  align-self: flex-start; /* Alinea los mensajes del bot a la izquierda */
+}
+
+.chatRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px; /* Espacio entre las filas de mensajes */
+}
+
+.userMessage {
+  background-color: #DCF8C6;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto; 
+  margin-right: 5px; /* Espacio entre los mensajes de usuario */
+  align-self: flex-end; /* Alinea los mensajes de usuario a la derecha */
+}
+
+
+.chatInput {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.inputField {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.sendButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #45a049;
+}
+.botImage {
+  width: 27px; /* Ancho deseado */
+  height: 27px; /* Altura deseada */
+  margin-right: 2px; /* Espacio entre la imagen y el mensaje del bot */
+  min-width: 27px; /* Tamaño mínimo */
+  min-height: 27px; /* Tamaño mínimo */
+}
