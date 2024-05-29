@@ -33,8 +33,8 @@ export default async function Contactos() {
                   <div className="title-bg absolute overflow-hidden left-0 top-[-50px] w-full text-[120px] leading-[120px] text-white uppercase font-bold tracking-[0.04em] text-center whitespace-nowrap pointer-events-none opacity-5">Contacto</div>
                   <div className="text">
                     <p className="m-0 mb-[30px] text-[23px] font-extralight">
-                      La página <strong className="font-bold text-extra-color">Contacto </strong>te muestra una página <br />
-                      donde vas a Contacatar con la persona<br />
+                      La página <strong className="font-bold text-extra-color">Contacto </strong>te muestra como <br />
+                     poder comunicarte con nosotros.<br />
 
                     </p>
                   </div>
@@ -78,7 +78,7 @@ export default async function Contactos() {
                         className="relative w-full h-auto rounded-tr-[18px] rounded-tl-[18px] transition-all duration-500"
                       />
                     </div>
-                    <div className="name m-0 text-[16px] leading-[20px] text-white font-bold">Linkedin</div>
+                    <div className="name m-0 text-[16px] leading-[20px] text-white font-bold">LinkedIn</div>
                     <p className="m-0">irene González González</p>
                   </div>
                 </div>
@@ -115,15 +115,7 @@ export default async function Contactos() {
                     <p className="m-0">4534567</p>
                   </div>
                 </div>
-                <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
-                  <div className="contacts-item card-box min-h-[87px] text-left !py-[20px] !pr-[20px] !pl-[75px]">
-                    <div className="icon m-0 absolute left-[20px] top-[20px] w-[40px] h-[40px] leading-[40px] text-[40px] text-extra-color">
-                      
-                    </div>
-                    <div className="name m-0 text-[16px] leading-[20px] text-white font-bold">Contacto</div>
-                    <Chat/>
-                  </div>
-                </div>
+               
               </div>
 
 

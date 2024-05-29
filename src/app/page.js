@@ -18,7 +18,7 @@ export default function Home() {
             
             <div className="typing-title">
               <p className="m-0">Una <strong className="text-white font-bold">plataforma de monitoreo</strong></p>
-              <p className="m-0">de tus cultivos</p>
+              <p className="m-0">para tus cultivos</p>
             </div>
             <span className="typed-title"></span>
           </div>

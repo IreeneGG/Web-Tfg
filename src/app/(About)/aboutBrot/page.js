@@ -53,9 +53,9 @@ export default async function AboutBrot() {
             <div className="row service-items text-[0]">
 
               <CardService titulo="Estadísticas" descripcion="Visualización de los datos acumulados de los sensores mediante gráficas"/>
-              <CardService titulo="Precipitaciones" descripcion="Visualización de las condiciones climatológicas de los próximos días según plataforma aemet"/>
-              <CardService titulo="Acumulados" descripcion="Visualización de las precipitaciones acumuladas en la localidad"/>
-              <CardService titulo="Algoritmo IA" descripcion="Visualización de las precipitaciones acumuladas en la localidad"/>
+              <CardService titulo="Precipitaciones" descripcion="Visualización de las condiciones climatológicas de los próximos días según plataforma Aemet"/>
+              <CardService titulo="Acumulados" descripcion="Visualización de las precipitaciones acumuladas en la localidad proporcionados por la plataforma SAIH"/>
+              <CardService titulo="Asistente IA" descripcion="Consultar dudas acerca de la agricultura con nuestro asistente Brotix"/>
             </div>
           </div>
         </div>

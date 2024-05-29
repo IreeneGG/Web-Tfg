@@ -73,8 +73,8 @@
   background-color: #45a049;
 }
 .botImage {
-  width: 27px; /* Ancho deseado */
-  height: 27px; /* Altura deseada */
+  width: 33px; /* Ancho deseado */
+  height: 33px; /* Altura deseada */
   margin-right: 2px; /* Espacio entre la imagen y el mensaje del bot */
   min-width: 27px; /* Tamaño mínimo */
   min-height: 27px; /* Tamaño mínimo */

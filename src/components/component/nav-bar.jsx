@@ -8,7 +8,7 @@ export function NavBar() {
 
 
       <div className="logo relative p-0 bg-extra-color text-center">
-        <a className="block h-[58px] leading-[58px] text-white no-underline" href="#"><span className="relative font-cormorant text-[28px] font-bold uppercase z-[2]">B</span></a>
+        <a className="block h-[58px] leading-[58px] text-white no-underline" href=""><span className="relative font-cormorant text-[28px] font-bold uppercase z-[2]">B</span></a>
       </div>
 
 
@@ -46,21 +46,26 @@ export function NavBar() {
             </a>
           </li>
           <li className="activate block m-4">
+            <a className="mx-0 my-[8px] relative block text-white text-center" href="/chat">
+              <div className="flex items-center justify-center"><Image src="/asistente.svg" width={27} height={27} alt="Asistente" /></div>
+
+              <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Brotix</span>
+            </a>
+          </li>
+
+          {/* <li className="activate block m-4">
             <a className="mx-0 my-[8px] relative block text-white text-center" href="/noticias">
               <div className="flex items-center justify-center"><Image src="/news1.svg" width={27} height={27} alt="Noticias" /></div>
 
               <span className="link mx-0 mb-0 mt-[-11px] px-[8px] py-0 absolute left-[120%] top-1/2 h-[22px] leading-[22px] text-[12px] text-white font-light bg-[#181818] opacity-0 invisible pointer-events-none rounded-[4px] translate-x-[-10px] transition-all duration-300">Noticias</span>
             </a>
-          </li>
+          </li> */}
 
 
         </ul>
       </div>
 
-      <div class="social absolute left-0 bottom-[10px] w-full">
-      <Button className="">Botón</Button>
-      </div>
-
+      
 
     </header>
   );

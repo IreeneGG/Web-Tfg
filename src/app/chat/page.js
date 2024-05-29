@@ -24,7 +24,7 @@ export default async function ChatBot() {
               WebkitOverflowScrolling: 'touch',
             }}
           >
-            <div class="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6" style={{ backgroundImage: "url('/bot.jpg')" }}>
+            <div class="card-image col col-m-12 col-t-12 col-d-4 col-d-lg-6" style={{ backgroundImage: "url('/brotix.jpeg')" }}>
 
             </div>
             <div className="content inner-top">
@@ -33,8 +33,8 @@ export default async function ChatBot() {
                   <div className="title-bg absolute overflow-hidden left-0 top-[-50px] w-full text-[120px] leading-[120px] text-white uppercase font-bold tracking-[0.04em] text-center whitespace-nowrap pointer-events-none opacity-5">Asistente</div>
                   <div className="text">
                     <p className="m-0 mb-[30px] text-[23px] font-extralight">
-                      La página <strong className="font-bold text-extra-color">ASISTENTE BROT </strong>te muestra una página <br />
-                      donde vas a Contacatar con la persona<br />
+                      Holaa! soy  <strong className="font-bold text-extra-color">BROTIX </strong>, estoy aquí para ayudarte<br />
+                     ¿Necesitas ayuda?<br />
 
                     </p>
                   </div>

@@ -54,7 +54,7 @@ export default function LinesChart({ datos }) {
         plugins: {
             title: {
                 display: true,
-                text: 'Humedad del suelo',
+                text: 'Procentaje de agua en tierra',
                 color: 'rgb(200, 200, 200)',
                 font: {
                     size: 18,

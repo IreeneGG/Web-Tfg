@@ -6,7 +6,7 @@ import { NavBar } from "@/components/component/nav-bar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Brot-x",
+  title: "Brot",
   favicon: "/favicon.ico",
 };
 

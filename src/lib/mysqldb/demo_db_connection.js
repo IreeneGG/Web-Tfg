@@ -33,7 +33,7 @@ function fetchDatosLectura() {
       ORDER BY 
         fecha ASC;
     `;
-    
+
     con.query(query, function (err, result) {
       if (err) {
         reject(err); // Rechazar la promesa si hay un error
@@ -71,7 +71,7 @@ function fetchDatosLecturaAmbiente() {
     // Crear la fecha del día anterior
     const yesterday = new Date(currentDate);
     yesterday.setDate(currentDate.getDate() - 1);
-    
+
     // Crear la fecha para los últimos cinco días
     const lastFiveDays = [];
     for (let i = 0; i < 5; i++) {
@@ -88,20 +88,34 @@ function fetchDatosLecturaAmbiente() {
       return `${year}-${month}-${day}`;
     });
 
-    // Construir la consulta SQL para obtener la media de temperatura y humedad de los últimos cinco días
+
+    // const query = `
+    //   SELECT 
+    //     DATE_FORMAT(hora, '%Y-%m-%d') AS fecha,
+    //     AVG(temperatura) AS temperatura_media,
+    //     AVG(humedad) AS humedad_media
+    //   FROM 
+    //     lecturasAmbiente
+    //   WHERE 
+    //     DATE(hora) IN (${formattedDates.map(date => `'${date}'`).join(',')})
+    //   GROUP BY 
+    //     DATE(hora)
+    //   ORDER BY 
+    //     fecha DESC`;
     const query = `
       SELECT 
-        DATE_FORMAT(hora, '%Y-%m-%d') AS fecha,
-        AVG(temperatura) AS temperatura_media,
-        AVG(humedad) AS humedad_media
-      FROM 
-        lecturasAmbiente
-      WHERE 
-        DATE(hora) IN (${formattedDates.map(date => `'${date}'`).join(',')})
-      GROUP BY 
-        DATE(hora)
-      ORDER BY 
-        fecha DESC`;
+      DATE_FORMAT(hora, '%Y-%m-%d') AS fecha,
+      AVG(temperatura) AS temperatura_media,
+      AVG(humedad) AS humedad_media
+    FROM 
+      lecturasAmbiente
+    WHERE 
+      DATE(hora) IN (${formattedDates.map(date => `'${date}'`).join(',')})
+    GROUP BY 
+      DATE(hora)
+    ORDER BY 
+      fecha DESC
+    LIMIT 1;`;
 
     // Ejecutar la consulta
     con.query(query, function (err, result) {
