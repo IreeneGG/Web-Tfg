@@ -9,12 +9,13 @@ const CardGrafics = async () => {
   try {
     // Obtener los datos de la consulta
     const result = await fetchDatosLectura();
-    // console.log('Resultado de la consulta:', result);
+     console.log('Resultado de la consulta 5 dias :', result);
   
     // Modificar datos dentro del bloque try
     datos = result.length > 0 ? result.map(row => ({
       fecha: row.fecha,
       humedad_media: row.humedad_media
+    
     })) : [];
   } catch (error) {
     console.error('Error al obtener los datos de la consulta:', error);

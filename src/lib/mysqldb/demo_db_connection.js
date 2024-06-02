@@ -12,26 +12,26 @@ var con = mysql.createConnection({
 function fetchDatosLectura() {
   return new Promise((resolve, reject) => {
     const query = `
-      SELECT 
-        DATE_FORMAT(ls.fecha, '%Y-%m-%d') AS fecha, 
-        AVG(ls.humedad) AS humedad_media 
-      FROM 
-        lecturaSuelo ls
-      INNER JOIN (
-        SELECT 
-          DISTINCT DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha
-        FROM 
-          lecturaSuelo
-        WHERE 
-          fecha <= NOW()
-        ORDER BY 
-          fecha DESC
-        LIMIT 4
-      ) sub ON DATE_FORMAT(ls.fecha, '%Y-%m-%d') = sub.fecha
-      GROUP BY 
-        DATE_FORMAT(ls.fecha, '%Y-%m-%d')
-      ORDER BY 
-        fecha ASC;
+    SELECT 
+    DATE_FORMAT(ls.fecha, '%Y-%m-%d') AS fecha, 
+    AVG(ls.humedad) AS humedad_media 
+FROM 
+    lecturaSuelo ls
+INNER JOIN (
+    SELECT 
+        DISTINCT DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha
+    FROM 
+        lecturaSuelo
+    WHERE 
+        fecha <= (SELECT MAX(fecha) FROM lecturaSuelo)  
+    ORDER BY 
+        fecha DESC
+    LIMIT 4
+) sub ON DATE_FORMAT(ls.fecha, '%Y-%m-%d') = sub.fecha
+GROUP BY 
+    DATE_FORMAT(ls.fecha, '%Y-%m-%d')
+ORDER BY 
+    fecha ASC;
     `;
 
     con.query(query, function (err, result) {
@@ -47,7 +47,7 @@ function fetchDatosLectura() {
   });
 }
 
-
+//lectura grafica queso
 function fetchUltimaTupla() {
   return new Promise((resolve, reject) => {
     con.query("SELECT * FROM lecturaSuelo ORDER BY id DESC LIMIT 1", function (err, result) {
@@ -64,6 +64,7 @@ function fetchUltimaTupla() {
   });
 }
 
+//lectura grafica ambiente
 function fetchDatosLecturaAmbiente() {
   return new Promise((resolve, reject) => {
     // Obtener la fecha actual

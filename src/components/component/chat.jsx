@@ -66,7 +66,7 @@ const Chat = () => {
                             <>
                                 <div className={styles.botImage}>
                                     <Image
-                                        src="/imagen.svg"
+                                        src="/ib.png"
                                         width={10}
                                         height={10}
                                         alt="Sensor"
