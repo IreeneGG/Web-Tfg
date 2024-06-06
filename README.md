@@ -3,13 +3,13 @@ Este Proyecto Fin de Grado de Ingeniería Informática se centra en el desarroll
 y gestión de cultivos agrícolas. A continuación, se proporciona una descripción detallada del proyecto:
 
 ## Instalación ⚙️
--Asegúrate de tener Docker y Docker Compose instalados en tu sistema.
--Clona este repositorio o descomprime el archivo del proyecto.
--Navega al directorio del proyecto.
+- Asegúrate de tener Docker y Docker Compose instalados en tu sistema.
+- Clona este repositorio o descomprime el archivo del proyecto.
+- Navega al directorio del proyecto.
 
 ## Ejecución ▶️
 Para construir y levantar el microservicio:
-  docker-compose up --build
+ ** docker-compose up --build**
 
 ## Microservicios
 
