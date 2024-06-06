@@ -9,7 +9,8 @@ y gestión de cultivos agrícolas. A continuación, se proporciona una descripci
 
 ## Ejecución ▶️
 Para construir y levantar el microservicio:
- ** docker-compose up --build**
+
+	docker-compose up --build
 
 ## Microservicios
 
