@@ -4,9 +4,9 @@ var mysql = require('mysql');
 // Crear la conexión a la base de datos
 var con = mysql.createConnection({
   host: "localhost",
-  user: "admin",
-  password: "1234",
-  database: "sensores"
+  user: "--",
+  password: "--",
+  database: "--"
 });
 
 function fetchDatosLectura() {
